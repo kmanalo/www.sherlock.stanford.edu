@@ -1,0 +1,1758 @@
+
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Sherlock Cluster documentation">
+      
+      
+        <link rel="canonical" href="https://www.sherlock.stanford.edu/docs/overview/transition/">
+      
+      
+        <meta name="author" content="Kilian Cavalotti">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\_\-\.]+">
+      
+      <link rel="shortcut icon" href="../../../img/logo_small.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+    
+    
+      
+        <title>Sherlock 2.0 - Sherlock</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.fe74ad26.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../../manifest.webmanifest">
+    
+    
+      <link rel="stylesheet" href="../../..">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-68034405-2", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="stanford" data-md-color-accent="stanford">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#sherlock-20-transition-guide" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://www.sherlock.stanford.edu/" title="Sherlock" class="md-header-nav__button md-logo">
+          
+            <img src="../../../img/logo_small.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Sherlock
+            </span>
+            <span class="md-header-nav__topic">
+              Sherlock 2.0
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/stanford-rc/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    SRCC <i class="fa fa-heart-o"></i> Open Source
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://www.sherlock.stanford.edu/" title="Sherlock" class="md-nav__button md-logo">
+      
+        <img src="../../../img/logo_small.png" width="48" height="48">
+      
+    </a>
+    Sherlock
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/stanford-rc/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    SRCC <i class="fa fa-heart-o"></i> Open Source
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Overview
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../concepts/" title="Concepts" class="md-nav__link">
+      Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Sherlock 2.0
+      </label>
+    
+    <a href="./" title="Sherlock 2.0" class="md-nav__link md-nav__link--active">
+      Sherlock 2.0
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-sherlock-20" title="Why Sherlock 2.0?" class="md-nav__link">
+    Why Sherlock 2.0?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transition-process" title="Transition process" class="md-nav__link">
+    Transition process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeline" title="Timeline" class="md-nav__link">
+    Timeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-changes" title="What changes?" class="md-nav__link">
+    What changes?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation" title="Documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login" title="Login" class="md-nav__link">
+    Login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware" title="Hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm-partitions" title="Slurm partitions" class="md-nav__link">
+    Slurm partitions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#job-submission-parameters" title="Job submission parameters" class="md-nav__link">
+    Job submission parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" title="Software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-stays-the-same" title="What stays the same?" class="md-nav__link">
+    What stays the same?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage" title="Storage" class="md-nav__link">
+    Storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-transfers" title="File transfers" class="md-nav__link">
+    File transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduler" title="Scheduler" class="md-nav__link">
+    Scheduler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-modules" title="Software modules" class="md-nav__link">
+    Software modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-differentiate-clusters" title="How to differentiate clusters?" class="md-nav__link">
+    How to differentiate clusters?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback-and-support" title="Feedback and support" class="md-nav__link">
+    Feedback and support
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../specs/" title="Tech specs" class="md-nav__link">
+      Tech specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../status/" title="Status" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/prerequisites/" title="Prerequisites" class="md-nav__link">
+      Prerequisites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/connecting/" title="Connecting" class="md-nav__link">
+      Connecting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/submitting/" title="Submitting jobs" class="md-nav__link">
+      Submitting jobs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      User guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        User guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/running-jobs/" title="Running jobs" class="md-nav__link">
+      Running jobs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Specialized resources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Specialized resources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/gpu/" title="GPU nodes" class="md-nav__link">
+      GPU nodes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/ondemand/" title="OnDemand" class="md-nav__link">
+      OnDemand
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/troubleshoot/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Storage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Storage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../storage/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../storage/filesystems/" title="Filesystems" class="md-nav__link">
+      Filesystems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../storage/data-sharing/" title="Data sharing" class="md-nav__link">
+      Data sharing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../storage/data-protection/" title="Data protection" class="md-nav__link">
+      Data protection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../storage/data-transfer/" title="Data transfer" class="md-nav__link">
+      Data transfer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Software
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Software
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/list/" title="List" class="md-nav__link">
+      List
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/modules/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/install/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/containers/" title="Containers" class="md-nav__link">
+      Containers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6">
+    
+    <label class="md-nav__link" for="nav-5-6">
+      Usage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-6">
+        Usage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/using/R/" title="R" class="md-nav__link">
+      R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/using/julia/" title="Julia" class="md-nav__link">
+      Julia
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/using/python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/using/perl/" title="Perl" class="md-nav__link">
+      Perl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/using/spark/" title="Spark" class="md-nav__link">
+      Spark
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/using/mariadb/" title="MariaDB" class="md-nav__link">
+      MariaDB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/using/postgresql/" title="PostgreSQL" class="md-nav__link">
+      PostgreSQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../software/using/singularity/" title="Singularity" class="md-nav__link">
+      Singularity
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Advanced topics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Advanced topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced-topics/connection/" title="Connection" class="md-nav__link">
+      Connection
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-sherlock-20" title="Why Sherlock 2.0?" class="md-nav__link">
+    Why Sherlock 2.0?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transition-process" title="Transition process" class="md-nav__link">
+    Transition process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeline" title="Timeline" class="md-nav__link">
+    Timeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-changes" title="What changes?" class="md-nav__link">
+    What changes?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation" title="Documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login" title="Login" class="md-nav__link">
+    Login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware" title="Hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm-partitions" title="Slurm partitions" class="md-nav__link">
+    Slurm partitions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#job-submission-parameters" title="Job submission parameters" class="md-nav__link">
+    Job submission parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" title="Software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-stays-the-same" title="What stays the same?" class="md-nav__link">
+    What stays the same?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage" title="Storage" class="md-nav__link">
+    Storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-transfers" title="File transfers" class="md-nav__link">
+    File transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduler" title="Scheduler" class="md-nav__link">
+    Scheduler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-modules" title="Software modules" class="md-nav__link">
+    Software modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-differentiate-clusters" title="How to differentiate clusters?" class="md-nav__link">
+    How to differentiate clusters?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback-and-support" title="Feedback and support" class="md-nav__link">
+    Feedback and support
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/stanford-rc/www.sherlock.stanford.edu/edit/docs/src/docs/overview/transition.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="sherlock-20-transition-guide">Sherlock 2.0 <small>transition guide</small><a class="headerlink" href="#sherlock-20-transition-guide" title="Permanent link">#</a></h1>
+<p>This transition guide is intended for users already familiar with Sherlock, to
+help them moving to Sherlock 2.0: differences with the existing, temporary
+conditions, etc.</p>
+<div class="admonition tip">
+<p class="admonition-title">Sherlock 2.0 orders</p>
+<p>If you are looking to buy into Sherlock 2.0, please see the <a href="https://srcc.stanford.edu/private/sherlock-qtr-order">Sherlock
+Order</a> page (<em>SUNet ID required</em>).</p>
+</div>
+<h2 id="why-sherlock-20">Why Sherlock 2.0?<a class="headerlink" href="#why-sherlock-20" title="Permanent link">#</a></h2>
+<p>Sherlock started in 2014 with 120 general use compute nodes and their
+associated networking (high-performance interconnect) and storage (Lustre
+scratch filesystem) infrastructure. Those nodes have been consistently heavily
+used.  An additional 730+ nodes were purchased by a wide variety of
+<a href="https://stanford.edu">Stanford</a> and <a href="https://slac.stanford.edu">SLAC</a> researchers and added to the
+initial base.</p>
+<p>However, the Infiniband fabric (the supporting network that interconnects all
+of the nodes and storage) eventually reached capacity, effectively putting a
+halt to Sherlock's growth. With the help of new recurring funding from the
+University, a new, completely separate cluster has been kick-started, with its
+own Infiniband fabric, new management servers, and a set of more
+capable compute nodes. These new nodes, along with an updated software
+environment, forms the basis of Sherlock 2.0.</p>
+<p>For the sake of simplicity, we'll refer to the new environment as Sherlock
+2.0, and to the existing one as Sherlock 1.0.</p>
+<h3 id="transition-process">Transition process<a class="headerlink" href="#transition-process" title="Permanent link">#</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Storage</p>
+<p>For the whole duration of the transition process, storage will be shared
+between Sherlock 1.0 and Sherlock 2.0 and will be accessible from both,
+meaning that users will be able to access and work on the the same files
+whatever cluster they connect to.</p>
+</div>
+<p>To allow every user to smoothly transition to the new system, a 3-phase
+process will take place.</p>
+<dl>
+<dt><strong>Phase 1</strong>: coexistence</dt>
+<dd>
+<p>For the duration of the transition period, both Sherlock 1.0 and Sherlock 2.0
+will coexist. As two separate clusters, they will use distinct login nodes and
+provide access to different hardware and software.</p>
+<div class="admonition warning">
+<p class="admonition-title">Two isolated clusters</p>
+<p>Specific compute nodes will only be accessible from one
+cluster at a time: the new compute nodes from Sherlock 2.0, and the old
+nodes from Sherlock 1.0. It also means that jobs submitted on Sherlock
+1.0 will not visible from Sherlock 2.0, and vice-versa.</p>
+</div>
+</dd>
+<dt><strong>Phase 2</strong>: merge</dt>
+<dd>
+<p>After sufficient time for the majority of users to validate and migrate to
+the new environment, the original Sherlock nodes will be merged into the new
+cluster. We'll work with individual owners to determine the best time frame for
+their own nodes migration, and will announce a date for the migration of all
+the general nodes from the public partitions.</p>
+</dd>
+<dt><strong>Phase 3</strong>: retirement</dt>
+<dd>
+<p>As they age out, compute nodes older than 5 years will be retired, to
+comply with the data center usage guidelines. When all the remaining Sherlock
+1.0 nodes have been merged into Sherlock 2.0, the Sherlock 1.0 and 2.0
+distinction will disappear, and Sherlock will be a single system again.</p>
+</dd>
+</dl>
+<h3 id="timeline">Timeline<a class="headerlink" href="#timeline" title="Permanent link">#</a></h3>
+<p>The Sherlock 1.0 to Sherlock 2.0 transition will happen according to the
+following timeline:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 05/08/2018: no new users accounts will be created on Sherlock 1.0</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 05/14/2018: the <code>gpu</code> and <code>bigmem</code> partitions are migrated to
+  Sherlock 2.0</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 06/25/2018: the <code>normal</code> partition is migrated to Sherlock 2.0</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 07/02/2018: the login and DTN nodes are migrated to Sherlock 2.0</li>
+</ul>
+<p>This will effectively mark the end of the Sherlock 1.0 environment.</p>
+<h2 id="what-changes">What changes?<a class="headerlink" href="#what-changes" title="Permanent link">#</a></h2>
+<p>Quite a lot!</p>
+<div class="admonition tldr">
+<p class="admonition-title">Most notable upgrades</p>
+<p>Additional cores per CPU, increased Infiniband throughput, twice the amount
+of memory per node and higher memory/core ratio, increased power
+redundancy, a new OS and software stack, and mandatory 2FA.</p>
+</div>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">#</a></h3>
+<p>As part of our documentation and communication effort, we're announcing
+three new web resources for Sherlock:</p>
+<ul>
+<li>a <a href="https://news.sherlock.stanford.edu">changelog</a> for news and updates, to get a better sense of
+  what's happening on Sherlock, beyond general email announces,</li>
+<li>a <a href="https://status.sherlock.stanford.edu">status dashboard</a>, where you'll find up-to-date information
+  about the status of the main Sherlock components and services. You could also
+  subscribe to receive notification in case of events or outages,</li>
+<li>and of course the very <a href="/docs">documentation</a> you're reading right now.</li>
+</ul>
+<h3 id="login">Login<a class="headerlink" href="#login" title="Permanent link">#</a></h3>
+<p>The most notable changes are visible right from the connection process.</p>
+<table>
+<thead>
+<tr>
+<th>Main changes</th>
+<th>Sherlock 1.0</th>
+<th>Sherlock 2.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Login nodes</strong></td>
+<td><code>sherlock.stanford.edu</code></td>
+<td><code>login.sherlock.stanford.edu</code></td>
+</tr>
+<tr>
+<td><strong>Authentication scheme</strong></td>
+<td>GSSAPI (Kerberos)</td>
+<td>SUNet ID password or GSSAPI</td>
+</tr>
+<tr>
+<td><strong>Two-step authentication</strong></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt><strong>New login hostname</strong></dt>
+<dd>
+<p>Sherlock 2.0 uses a new set of login nodes, under a different load-balanced
+  hostname. To connect, you'll need to use:
+  <div class="codehilite"><pre><span></span>$ ssh &lt;sunet&gt;@login.sherlock.stanford.edu
+</pre></div>
+  (note the <code>login</code> part of the hostname)</p>
+<div class="admonition info">
+<p class="admonition-title">New server fingerprint</p>
+<p>When you connect to the new login nodes for the first time, you'll be
+presented with the new servers' fingerprint (host keys). Please see the
+<a href="/docs/getting-started/connecting/#host-keys">Connecting</a> page for more details.</p>
+</div>
+</dd>
+<dt><strong>New authentication scheme</strong></dt>
+<dd>
+<p>GSSAPI (Kerberos) is not required anymore. To make up for the next item, we
+  relaxed the requirement on Kerberos authentication for Sherlock 2.0. Meaning
+  that you will now be able to connect using your SUNet ID password, without
+  having to get a Kerberos ticket via <code>kinit</code> first.  We hope this will also
+  ease the connection process from clients and OS which don't correctly support
+  GSSAPI. And please note that if you still want to use Kerberos for
+  authentication, you can.</p>
+</dd>
+<dt><strong>Two-step authentication</strong></dt>
+<dd>
+<p>Two-step (or two-factor) authentication (2FA) this is now a requirement in
+  the <a href="https://uit.stanford.edu/guide/securitystandards">Minimum Security Standards</a> mandated by the <a href="https://uit.stanford.edu/security">Information
+  Security Office</a>, and that we're implementing on Sherlock. Upon
+  connection, you will be prompted for your password (if you're not using
+  GSSAPI) and a two-factor prompt like this:
+  <div class="codehilite"><pre><span></span>Duo two-factor login for johndoe
+
+Enter a passcode or select one of the following options:
+
+ 1. Duo Push to XXX-XXX-4425
+ 2. Phone call to XXX-XXX-4425
+ 3. SMS passcodes to XXX-XXX-4425 (next code starts with: 1)
+
+Passcode or option (1-3):
+</pre></div>
+    Upon validation of the passcode, you'll be connected to Sherlock's login
+    nodes as usual.</p>
+</dd>
+</dl>
+<p>For more details about the login procedure, see the <a href="/docs/getting-started/connecting">Connecting</a>
+page.</p>
+<h3 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">#</a></h3>
+<p>A number of changes differentiate Sherlock 2.0 from the first generation:
+technology has evolved and those changes are reflected in the new hardware
+specifications. Here are the main changes on typical compute nodes:</p>
+<table>
+<thead>
+<tr>
+<th>Main changes</th>
+<th>Sherlock 1.0</th>
+<th>Sherlock 2.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nodes</strong></td>
+<td>1U Dell R630 servers</td>
+<td>0.5U C6320 servers in a 2U chassis</td>
+</tr>
+<tr>
+<td><strong>CPUs</strong></td>
+<td>2x 8-core (Ivy-Bridge/Haswell)</td>
+<td>2x 10-core (Broadwell)</td>
+</tr>
+<tr>
+<td><strong>Memory</strong></td>
+<td>64G (base node)</td>
+<td>128G (base node)</td>
+</tr>
+<tr>
+<td><strong>Local storage</strong></td>
+<td>200G SSD (+ 500G HDD)</td>
+<td>200G SSD</td>
+</tr>
+<tr>
+<td><strong>Interconnect</strong></td>
+<td>56G FDR Infiniband</td>
+<td>100G EDR Infiniband</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt><strong>Nodes</strong></dt>
+<dd>
+<p>Base node model moves from the Dell R630 1U server to the Dell C6320
+  system. More servers will fit in a single rack, which is essential for us to
+  accommodate the ever-increasing demand for servers.  Another change is that
+  the new model provides redundant power supplies, in case one fails. Each
+  C6320 chassis houses four independent servers in only two rack units of
+  space.</p>
+</dd>
+<dt><strong>CPUs</strong></dt>
+<dd>
+<p>Upgrade from Intel&reg; Xeon&reg; E5-2640v3 (8-core, 2.6GHz) to E5-2640v4
+  (10-core, 2.4GHz), meaning that each CPU gets two additional cores, and that
+  to maintain a 90W power envelope, the clock speed changed from 2.6GHz to
+  2.4GHz.</p>
+</dd>
+<dt><strong>Memory</strong></dt>
+<dd>
+<p>Because of the 2 additional cores per CPU, a total for 4 more per node,
+  having a 64GB minimum RAM requirement was no longer deemed to be a good fit.
+  Originally, 64GB for 16 cores gave a ratio of 4GB/core. With the same 64GB
+  per node, the memory per core ratio on Sherlock 2.0 would have dropped to
+  3.2GB/core.  Usage statistics showed that more RAM per core has been needed
+  for a wide range of applications.  So for Sherlock 2.0, the minimum memory
+  amount per node has be set to 128GB, or 6.4GB/core, a much more appropriate
+  ratio for the typical user needs.</p>
+</dd>
+<dt><strong>Local storage</strong></dt>
+<dd>
+<p>The slightly smaller form factor of each node has prompted
+  elimination of the 500G spinning hard drive, keeping the 200G SSD.  Sherlock
+  statistics showed that the hard drive was rarely used, as users favored use
+  of the very fast Lustre /scratch file system available to all nodes.</p>
+</dd>
+<dt><strong>Interconnect</strong></dt>
+<dd>
+<p>Substantial network improvement by way of an almost 2x increase in
+  Infiniband (IB) speed. Sherlock 1.0 uses the FDR IB speed of 56Gbps, while
+  Sherlock 2.0 uses EDR IB at 100Gbps.</p>
+</dd>
+</dl>
+<h3 id="slurm-partitions">Slurm partitions<a class="headerlink" href="#slurm-partitions" title="Permanent link">#</a></h3>
+<p>The same organization of compute nodes will be used on Sherlock 2.0, with the
+same partition nomenclature, although different hardware characteristics:</p>
+<table>
+<thead>
+<tr>
+<th>Main changes</th>
+<th>Sherlock 1.0</th>
+<th>Sherlock 2.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>normal</code></td>
+<td>116x 16c/64GB nodes</td>
+<td>56x 20c/128GB nodes</td>
+</tr>
+<tr>
+<td><code>dev</code></td>
+<td>2x 16c/64GB nodes</td>
+<td>2x 20c/128GB nodes</td>
+</tr>
+<tr>
+<td><code>bigmem</code></td>
+<td>2x 32c/1.5TB nodes</td>
+<td>1x 56c/3.0TB node<br/> 1x 32c/512GB node</td>
+</tr>
+<tr>
+<td><code>gpu</code></td>
+<td>6x 16c/256GB nodes <br/> w/ 8x K20/K80/TITAN Black</td>
+<td>5x 20c/256GB nodes <br/> w/ 4x P40/P100_PCIE/V100_NVLINK</td>
+</tr>
+</tbody>
+</table>
+<p>After the first coexistence phase of the <a href="#transition-process">transition</a>,
+Sherlock 1.0 nodes will be merged in Sherlock 2.0 partitions, and the resulting
+general partitions will be the combination of both. For instance, the <code>normal</code>
+partition will feature 172 nodes.</p>
+<h4 id="job-submission-parameters">Job submission parameters<a class="headerlink" href="#job-submission-parameters" title="Permanent link">#</a></h4>
+<p>QOS and limits are slightly different too, because of the different
+characteristics of Sherlock 2.0, and the new version of Slurm (cf. below).</p>
+<p>The main change will be that your jobs won't generally need to specify any QOS,
+except for the <em>long</em> one. or in other words, <code>--qos=long</code> is the only QOS
+option you will need to specify in your jobs. The <code>bigmem</code> and <code>gpu</code> QOSes are
+not used anymore for job submission, and will lead to errors if used. The goal
+is to simplify job submission for new users and limit the number of parameters
+to specify when submitting jobs.</p>
+<h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">#</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Changes required</p>
+<p>Sherlock 2.0 runs a newer version of the Linux Operating System (OS) and as
+a result, most the software available on Sherlock 1.0 needs to be
+recompiled and reinstalled to work optimally in the new environment.</p>
+</div>
+<p>Sherlock 2.0 runs an updated software stack, from kernel to user-space
+applications, including management software. Most user-facing applications
+are new version of the same software, while the management stack has been
+completely overhauled and redesigned from scratch.</p>
+<p>Changes include:</p>
+<table>
+<thead>
+<tr>
+<th>Main changes</th>
+<th>Sherlock 1.0</th>
+<th>Sherlock 2.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OS</strong></td>
+<td>CentOS 6.x</td>
+<td>CentOS 7.x</td>
+</tr>
+<tr>
+<td><strong>Scheduler</strong></td>
+<td>Slurm 16.05.x</td>
+<td>Slurm 17.02.x</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-stays-the-same">What stays the same?<a class="headerlink" href="#what-stays-the-same" title="Permanent link">#</a></h2>
+<p>We're well aware that transitioning to a new system takes time and effort away
+from research, and we wanted to minimize disruption. So we've focused our
+attention on revamping and improving the required elements, but we didn't
+change it all: we kept the best parts as they are.</p>
+<h3 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">#</a></h3>
+<p>All the storage systems (including <code>$HOME</code>, <code>$GROUP_HOME</code>, <code>$SCRATCH</code>, <code>$GROUP_SCRATCH</code>
+and <code>$OAK</code>) are shared between Sherlock 1.0 and Sherlock 2.0. So all the
+files and folders available on Sherlock 1.0 will be available on Sherlock 2.0.</p>
+<div class="admonition caution">
+<p class="admonition-title">Path changes</p>
+<p>Be advised that the paths of the <code>/home</code> and <code>/share/PI</code> directories have
+changed on Sherlock 2.0.  They are now respectively <code>/home/users</code> and
+<code>/home/groups</code>.</p>
+<p>We strongly recommend referring to them through the <code>$HOME</code> and <code>$GROUP_HOME</code>
+environment variables instead of using the full paths.</p>
+</div>
+<h3 id="file-transfers">File transfers<a class="headerlink" href="#file-transfers" title="Permanent link">#</a></h3>
+<p>To transfer files, you can continue to use the existing data-transfer node
+(DTN): since all the filesystems are shared between the two clusters, files
+uploaded through the DTN will be immediately available on Sherlock 2.0.</p>
+<p>For more information, see the <a href="/docs/storage/data-transfer">Data transfer</a> page.</p>
+<h3 id="scheduler">Scheduler<a class="headerlink" href="#scheduler" title="Permanent link">#</a></h3>
+<p>In terms of scheduling, the same principles users are already familiar
+with on Sherlock 1.0 are conserved:</p>
+<ul>
+<li>a set of general partitions, available to all users: <code>normal</code>, <code>bigmem</code>,
+  <code>gpu</code>, <code>dev</code>,</li>
+<li>owner-specific partitions, regrouping nodes bought by PI groups,</li>
+<li>a global <code>owners</code> partition, to allow other owners to use idle nodes,</li>
+<li>same backfilling and fair share scheduling rules,</li>
+<li>similar limits on most partitions,</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Owners' partition on Sherlock 2.0</p>
+<p>While the two clusters operate as separate entities (phase 1 of the
+<a href="#transition-process">transition process</a>), owners on Sherlock 1.0 and
+Sherlock 2.0 will be considered two distinct groups. Meaning that Sherlock
+1.0 owners won't be able to use the <code>owners</code> partition on Sherlock 2.0, and
+vice-versa.</p>
+<p>As we move through <a href="#transition-process">Phase 2</a>, and as Sherlock 1.0
+owners nodes are folded into Sherlock 2.0, Sherlock 1.0 owners will gain
+access to the <code>owners</code> partition on Sherlock 2.0.</p>
+</div>
+<p>For more details about the scheduler, see the <a href="/docs/user-guide/running">Running Jobs</a> page.</p>
+<h3 id="software-modules">Software modules<a class="headerlink" href="#software-modules" title="Permanent link">#</a></h3>
+<p>Part of the current Sherlock user software stack has been ported over to
+Sherlock 2.0, with a refreshed but similar <a href="/docs/software/modules">modules</a> system.</p>
+<p>That software stack on Sherlock is an ongoing effort, and we'll be continuing
+to add new applications over the coming days and weeks.</p>
+<h2 id="how-to-differentiate-clusters">How to differentiate clusters?<a class="headerlink" href="#how-to-differentiate-clusters" title="Permanent link">#</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Determine the Sherlock version</p>
+<p>To check which cluster environment you're running on, check the value of
+the <code>$SHERLOCK</code> environment variable.</p>
+</div>
+<p>To ease transition to the new software environment, and to make re-using the
+same scripts more convenient, we provide a way to check which cluster your
+jobs are running on. By checking the value of the <code>$SHERLOCK</code> environment
+variable, you'll be able to determine which environment your scripts should be
+expecting.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th align="right">Output on Sherlock 1.0</th>
+<th align="right">Output on Sherlock 2.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>echo $SHERLOCK</code></td>
+<td align="right"><code>1</code></td>
+<td align="right"><code>2</code></td>
+</tr>
+</tbody>
+</table>
+<p>So, for instance, the following batch script will check that environment
+variable to determine where it's running, and load the appropriate Python
+module:</p>
+<div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#</span>
+<span class="c1">#SBATCH --job-name=test</span>
+<span class="c1">#SBATCH --time 10:00</span>
+<span class="c1">#</span>
+
+<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$SHERLOCK</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Running on Sherlock 1.0&quot;</span>
+    module load python/2.7.5
+
+<span class="k">elif</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$SHERLOCK</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Running on Sherlock 2.0&quot;</span>
+    module load python/2.7.13
+
+<span class="k">else</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Uh-oh, not sure where we are...&quot;</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+python -c <span class="s2">&quot;print &#39;Hello Sherlock&#39;&quot;</span>
+</pre></div>
+
+<p>That script could be submitted with <code>sbatch</code> on either cluster, and will
+produce the exact same output.</p>
+<p>The <code>$SHERLOCK</code> environment variable will remain available throughout all the
+<a href="#transition-process">transition phases</a>, and will stay defined even after the
+two clusters have been merged.</p>
+<h2 id="feedback-and-support">Feedback and support<a class="headerlink" href="#feedback-and-support" title="Permanent link">#</a></h2>
+<p>Your feedback is very important to us, especially in the early stages of a new
+system. So please tell us about any issues you run into and successes you have.
+Feel free to contact us by email at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#114;&#99;&#99;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#115;&#116;&#97;&#110;&#102;&#111;&#114;&#100;&#46;&#101;&#100;&#117;">&#115;&#114;&#99;&#99;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#115;&#116;&#97;&#110;&#102;&#111;&#114;&#100;&#46;&#101;&#100;&#117;</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Glossary
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../specs/" title="Tech specs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Tech specs
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2014 - 2018 &mdash; <a href='mailto:srcc-support@stanford.edu'>Stanford Research Computing Center</a>
+          </div>
+        
+        
+          
+          Made with <i class="fa fa-heart md-highlight"></i> in
+          <span class="md-footer-copyright__highlight">
+            <a href='https://www.google.com/maps/place/Stanford,+CA'>Stanford, California</a>
+          </span>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://srcc.stanford.edu" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/stanford-rc" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/StanfordCompute" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/school/1792/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.6e3ed545.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../.."></script>
+      
+        <script src="../../../search/main.js"></script>
+      
+    
+  </body>
+</html>
